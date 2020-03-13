@@ -5,11 +5,14 @@ authors = ["Xuejie Xiao <xxuejie@gmail.com>"]
 edition = "2018"
 
 [dependencies]
+bytes = { version = "0.5.4", features = ["serde"] }
 clap = { version = "2" }
 ckb-app-config = { git = "https://github.com/nervosnetwork/ckb", rev = "27c36a5" }
 ckb-build-info = { git = "https://github.com/nervosnetwork/ckb", rev = "27c36a5" }
 ckb-chain = { git = "https://github.com/nervosnetwork/ckb", rev = "27c36a5" }
 ckb-logger = { git = "https://github.com/nervosnetwork/ckb", rev = "27c36a5" }
 ckb-shared = { git = "https://github.com/nervosnetwork/ckb", rev = "27c36a5" }
+ckb-types = { git = "https://github.com/nervosnetwork/ckb", rev = "27c36a5" }
 ckb-verification = { git = "https://github.com/nervosnetwork/ckb", rev = "27c36a5" }
-ctrlc = { version = "3.1", features = ["termination"] }
+crossbeam-channel = "0.3"
+faster-hex = "0.4"

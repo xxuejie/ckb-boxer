@@ -1,4 +1,4 @@
-use bytes::BytesMut;
+use bytes::Bytes;
 use ckb_app_config::{ExitCode, Setup};
 use ckb_build_info::Version;
 use ckb_chain::chain::{ChainController, ChainService};
@@ -127,9 +127,10 @@ fn handle_new_block(
     shared: &Shared,
     payload: &[u8],
 ) -> Result<(), String> {
-    let mut raw = BytesMut::with_capacity(payload.len() / 2);
+    let mut raw = Vec::new();
+    raw.resize(payload.len() / 2, 0);
     hex_decode(payload, &mut raw).map_err(|e| format!("Hex decode error: {:?}", e))?;
-    let raw = raw.freeze();
+    let raw = Bytes::from(raw);
     BlockReader::verify(&raw, false)
         .map_err(|e| format!("Molecule verification error: {:?}", e))?;
     let block = Block::new_unchecked(raw).into_view();

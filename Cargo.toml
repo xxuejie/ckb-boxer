@@ -5,18 +5,18 @@ authors = ["Xuejie Xiao <xxuejie@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-ckb-app-config = { git = "https://github.com/xxuejie/ckb", rev = "d556997" }
-ckb-build-info = { git = "https://github.com/xxuejie/ckb", rev = "d556997" }
-ckb-chain = { git = "https://github.com/xxuejie/ckb", rev = "d556997" }
-ckb-error = { git = "https://github.com/xxuejie/ckb", rev = "d556997" }
-ckb-shared = { git = "https://github.com/xxuejie/ckb", rev = "d556997" }
-ckb-types = { git = "https://github.com/xxuejie/ckb", rev = "d556997" }
-ckb-verification = { git = "https://github.com/xxuejie/ckb", rev = "d556997" }
+ckb-app-config = { git = "https://github.com/nervosnetwork/ckb", tag = "v0.34.2" }
+ckb-build-info = { git = "https://github.com/nervosnetwork/ckb", tag = "v0.34.2" }
+ckb-chain = { git = "https://github.com/nervosnetwork/ckb", tag = "v0.34.2" }
+ckb-error = { git = "https://github.com/nervosnetwork/ckb", tag = "v0.34.2" }
+ckb-shared = { git = "https://github.com/nervosnetwork/ckb", tag = "v0.34.2" }
+ckb-types = { git = "https://github.com/nervosnetwork/ckb", tag = "v0.34.2" }
+ckb-verification = { git = "https://github.com/nervosnetwork/ckb", tag = "v0.34.2" }
 derive_more = "0.99.2"
 
 [dev-dependencies]
 bytes = { version = "0.5.4", features = ["serde"] }
 clap = { version = "2" }
-ckb-logger = { git = "https://github.com/xxuejie/ckb", rev = "d556997" }
+ckb-logger = { git = "https://github.com/nervosnetwork/ckb", tag = "v0.34.2" }
 crossbeam-channel = "0.3"
 faster-hex = "0.4"
